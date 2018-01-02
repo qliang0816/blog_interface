@@ -12,9 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
+Route::get('/article', function () {
+    return view('article');
+});
+
+Route::get('/media', function () {
+    return view('media');
+});
+
+Route::get('/timeline', function () {
+    return view('timeline');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
