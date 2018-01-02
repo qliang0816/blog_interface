@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::resource('/', 'IndexController');
 
 Route::get('/article', function () {
     return view('article');
