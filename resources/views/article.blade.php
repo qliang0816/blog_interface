@@ -16,12 +16,17 @@
           </p>
         </div>        
         <div class="am-article-bd">
-        <img src="{{ asset('storage/'.$article->image) }}" alt="" class="blog-entry-img blog-article-margin am-img-responsive">
+        <img src="{{ asset('storage/'.$article->image) }}" alt="" class="blog-entry-img blog-article-margin am-img-responsive" style="margin: 0 auto;height:400px">
+        </br>
         <p class='marked'>{{ $article->text }}</p>
       </article>
         <ul class="am-pagination blog-article-margin">
-          <li class="am-pagination-prev"><a href="#" class="">&laquo; 一切的回顾</a></li>
-          <li class="am-pagination-next"><a href="">不远的未来 &raquo;</a></li>
+          @if(!empty($previous))
+          <li class="am-pagination-prev"><a href="{{ url('/article/'.$previous->id) }}" class="">&laquo; {{ $previous->title }}</a></li>
+          @endif
+          @if(!empty($next))
+          <li class="am-pagination-next"><a href="{{ url('/article/'.$next->id) }}">{{ $next->title }} &raquo;</a></li>
+          @endif
         </ul>
         <hr>
         <form class="am-form am-g">
