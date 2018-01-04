@@ -11,11 +11,9 @@
 |
 */
 
-Route::resource('/', 'IndexController');
+Route::get('/', 'IndexController@index');
 
-Route::get('/article', function () {
-    return view('article');
-});
+Route::get('/article/{id}', 'ArticleController@index');
 
 Route::get('/media', function () {
     return view('media');

@@ -1,4 +1,3 @@
-<hr>
 <!-- nav start -->
 <nav class="am-g am-g-fixed blog-fixed blog-nav">
 <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
@@ -17,9 +16,8 @@
           <li><a href="lw-index-noslider.html">4. blog-index-noslider</a></li>
         </ul>
       </li>  --}}
-      <li><a href="{{ url('/article') }}">标准文章</a></li>
+      {{--  <li><a href="{{ url('/article') }}">标准文章</a></li>  --}}
       <li><a href="{{ url('/image') }}">图片库</a></li>
-      {{--  <li><a href="lw-article-fullwidth.html">全宽页面</a></li>  --}}
       <li><a href="{{ url('/timeline') }}">存档</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">

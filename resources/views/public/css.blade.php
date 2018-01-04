@@ -1,2 +1,2 @@
-<link rel="stylesheet" href="assets/css/amazeui.min.css">
-<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="{{ asset('/assets/css/amazeui.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/assets/css/app.css') }}">

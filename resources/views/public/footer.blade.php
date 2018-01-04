@@ -11,7 +11,6 @@
                 <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon blog-icon"></span></a>
                 <a href=""><span class="am-icon-github am-icon-fw blog-icon blog-icon"></span></a>
                 <a href=""><span class="am-icon-weibo am-icon-fw blog-icon blog-icon"></span></a>
-                <a href=""><span class="am-icon-reddit am-icon-fw blog-icon blog-icon"></span></a>
                 <a href=""><span class="am-icon-weixin am-icon-fw blog-icon blog-icon"></span></a>
             </p>
             <h3>Credits</h3>

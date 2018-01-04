@@ -67,20 +67,21 @@
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-8 am-u-sm-12">
         @foreach($texts as $text)
-        <article class="am-g blog-entry-article">
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                <img src="assets/i/f10.jpg" alt="" class="am-u-sm-12">
-            </div>
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="{{ url('/') }}" class="blog-color">article &nbsp;</a></span>
-                <span> @leo_qin &nbsp;</span>
-                <span>{{ date('Y-m-d',strtotime($text->updated_at)) }}</span>
-                <h1><a href="">{{ $text->title }}</a></h1>
-                <p>{{ $text->text }}
-                </p>
-                <p><a href="" class="blog-continue">continue reading</a></p>
-            </div>
-        </article>
+        <div class="am-list-news" >
+            <article class="am-g blog-entry-article">
+                <div class="am-u-lg-4 am-u-md-12 am-u-sm-12 blog-entry-img">
+                    <img src="{{ asset('storage/'.$text->image) }}" alt="" class="am-u-sm-12">
+                </div>
+                <div class="am-u-lg-8 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span><a href="{{ url('/') }}" class="blog-color">article &nbsp;&nbsp;</a></span>
+                    <span> @leo_qin &nbsp;&nbsp;</span>
+                    <span>{{ $text->updated_at }}</span>
+                    <h1><a href="{{ url('/article/'.$text->id) }}">{{ $text->title }}</a></h1>
+                    <p>{{ $text->summary }}</p>
+                    <p><a href="" class="blog-continue">continue reading</a></p>
+                </div>
+            </article>
+        </div>
         @endforeach
         {{ $texts->links() }}
     </div>

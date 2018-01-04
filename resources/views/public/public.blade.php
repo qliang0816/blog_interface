@@ -3,11 +3,11 @@
 @include('public.head')
 
 <body id="@yield('blog_id')">
-@include('public.header')
+{{--  @include('public.header')  --}}
 @include('public.nav')
 
-@section('banner')
-@show
+{{--  @section('banner')
+@show  --}}
 
 @section('content')
 @show

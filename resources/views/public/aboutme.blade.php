@@ -1,7 +1,7 @@
 <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
-            <img src="assets/i/f14.jpg" alt="about me" class="blog-entry-img" >
+            <img src="{{ asset('/assets/i/f14.jpg') }}" alt="about me" class="blog-entry-img" >
             <p>妹纸</p>
             <p>
         我是妹子UI，中国首个开源 HTML5 跨屏前端框架
@@ -13,7 +13,6 @@
                 <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
                 <a href=""><span class="am-icon-github am-icon-fw blog-icon"></span></a>
                 <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
-                <a href=""><span class="am-icon-reddit am-icon-fw blog-icon"></span></a>
                 <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
             </p>
         </div>
