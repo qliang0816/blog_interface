@@ -1,5 +1,5 @@
 <footer class="blog-footer">
-    <div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-footer-padding">
+    {{--  <div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-footer-padding">
         <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
             <h3>模板简介</h3>
             <p class="am-text-sm">这是一个使用amazeUI做的简单的前端模板。<br> 博客/ 资讯类 前端模板 <br> 支持响应式，多种布局，包括主页、文章页、媒体页、分类页等<br>嗯嗯嗯，不知道说啥了。外面的世界真精彩<br><br>
@@ -29,6 +29,6 @@
                 </ul>
             </p>
         </div>
-    </div>    
-    <div class="blog-text-center">© 2015 AllMobilize, Inc. Licensed under MIT license. Made with love By LWXYFER</div>    
+    </div>      --}}
+    <div class="blog-text-center">© 2017 AllMobilize, Inc. Licensed under MIT license. Made By Leo</div>    
 </footer>

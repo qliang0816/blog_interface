@@ -10,4 +10,5 @@
 <script src="{{ asset('/assets/js/pinto.min.js') }}"></script>
 <script src="{{ asset('/assets/js/img.js') }}"></script>
 <script src="{{ asset('/assets/js/marked.min.js') }}"></script>
+<script src="{{ asset('/assets/js/highlight.pack.js') }}"></script>
 <script src="{{ asset('/assets/js/worker.js') }}"></script>
