@@ -11,8 +11,8 @@
           <h1 class="am-article-title blog-text-center">{{ $article->title }}</h1>
           <p class="am-article-meta blog-text-center">
               <span><a href="{{ url('/') }}" class="blog-color">article &nbsp;&nbsp;</a></span>-
-              <span><a href="#">@leo_qin &nbsp;&nbsp;</a></span>-
-              <span><a href="#">{{ $article->updated_at }}</a></span>
+              <span><a href="javascript:void(0);">@leo_qin &nbsp;&nbsp;</a></span>-
+              <span><a href="javascript:void(0);">{{ $article->updated_at }}</a></span>
           </p>
         </div>        
         <div class="am-article-bd">

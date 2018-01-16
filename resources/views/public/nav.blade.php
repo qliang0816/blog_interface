@@ -17,12 +17,12 @@
         </ul>
       </li>  --}}
       {{--  <li><a href="{{ url('/article') }}">标准文章</a></li>  --}}
-      <li><a href="{{ url('/image') }}">图片库</a></li>
+      <li><a href="{{ url('/media') }}">图片库</a></li>
       <li><a href="{{ url('/timeline') }}">存档</a></li>
     </ul>
-    <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
+    <form action="{{ url('/') }}" class="am-topbar-form am-topbar-right am-form-inline" role="search" method="get">
       <div class="am-form-group">
-        <input type="text" class="am-form-field am-input-sm" placeholder="搜索">
+        <input id="title" type="text" class="am-form-field am-input-sm" name="title" value="{{ isset($title) ? $title : '' }}" placeholder="搜索">
       </div>
     </form>
   </div>

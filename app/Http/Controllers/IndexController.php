@@ -12,10 +12,17 @@ class IndexController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $texts = Texts::orderBy('updated_at','desc')->paginate(6);
+        $title = $request->input('title');
+        if (empty($title)) {
+            $texts = Texts::orderBy('updated_at','desc')->paginate(6);
+        } else {
+            // dd($title);
+            $texts = Texts::where('title','like',"%$title%")->orderBy('updated_at','desc')->paginate(6);
+        }
+        
         // dd($texts);
-        return view('index',['texts' => $texts]);
+        return view('index',['texts' => $texts,'title'=>$title]);
     }
 }

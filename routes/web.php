@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/{title?}', 'IndexController@index');
 
 Route::get('/article/{id}', 'ArticleController@index');
 
-Route::get('/media', function () {
-    return view('media');
-});
+Route::get('/media', 'MediaController@index');
 
 Route::get('/timeline', function () {
     return view('timeline');
