@@ -12,7 +12,7 @@
         <ul class="am-dropdown-content">
           <li><a href="{{ url('/media') }}">All</a></li>
           @foreach($image_category as $val)
-          <li><a href="{{ url('/media/'.$val->id) }}">{{ $val->name }}</a></li>
+          <li><a href="{{ url('/media?category_id='.$val->id) }}">{{ $val->name }}</a></li>
           @endforeach
         </ul>
       </li>
