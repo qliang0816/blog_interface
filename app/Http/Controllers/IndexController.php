@@ -21,7 +21,6 @@ class IndexController extends BaseController
             // dd($title);
             $texts = Texts::where('title','like',"%$title%")->orderBy('updated_at','desc')->paginate(6);
         }
-        
         // dd($texts);
         return view('index',['texts' => $texts,'title'=>$title]);
     }

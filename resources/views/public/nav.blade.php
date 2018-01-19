@@ -5,19 +5,17 @@
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
       <li><a href="{{ url('/') }}">首页</a></li>
-      {{--  <li class="am-dropdown" data-am-dropdown>
+      <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-          首页布局 <span class="am-icon-caret-down"></span>
+          图片库 <span class="am-icon-caret-down"></span>
         </a>
         <ul class="am-dropdown-content">
-          <li><a href="lw-index.html">1. blog-index-standard</a></li>
-          <li><a href="lw-index-nosidebar.html">2. blog-index-nosidebar</a></li>
-          <li><a href="lw-index-center.html">3. blog-index-layout</a></li>
-          <li><a href="lw-index-noslider.html">4. blog-index-noslider</a></li>
+          <li><a href="{{ url('/media') }}">All</a></li>
+          @foreach($image_category as $val)
+          <li><a href="{{ url('/media/'.$val->id) }}">{{ $val->name }}</a></li>
+          @endforeach
         </ul>
-      </li>  --}}
-      {{--  <li><a href="{{ url('/article') }}">标准文章</a></li>  --}}
-      <li><a href="{{ url('/media') }}">图片库</a></li>
+      </li>
       <li><a href="{{ url('/timeline') }}">存档</a></li>
     </ul>
     <form action="{{ url('/') }}" class="am-topbar-form am-topbar-right am-form-inline" role="search" method="get">

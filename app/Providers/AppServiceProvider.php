@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\ImageCategories;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $category = ImageCategories::all();
+        view()->share('image_category',$category);
     }
 
     /**

@@ -9,7 +9,7 @@ class MediaController extends BaseController
     //
     public function index()
     {
-        dd(1);
+        
         return view('media');
     }
 }
