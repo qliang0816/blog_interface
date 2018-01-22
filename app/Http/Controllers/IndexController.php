@@ -15,12 +15,9 @@ class IndexController extends BaseController
     public function index(Request $request)
     {
         $title = $request->input('title');
-        if (empty($title)) {
-            $texts = Texts::orderBy('updated_at','desc')->paginate(6);
-        } else {
-            // dd($title);
-            $texts = Texts::where('title','like',"%$title%")->orderBy('updated_at','desc')->paginate(6);
-        }
+        $texts = Texts::when(!empty($title),function($query) use ($title) {
+            return $query->where('title','like',"%$title%");
+        })->where('is_show','1')->orderBy('updated_at','desc')->paginate(6);
         // dd($texts);
         return view('index',['texts' => $texts,'title'=>$title]);
     }

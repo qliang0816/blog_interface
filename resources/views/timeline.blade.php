@@ -1,11 +1,10 @@
 @extends('public.public')
 
 @section('content')
-<hr>
 <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
-        <h1 class="blog-text-center">-- 存档 --</h1>
+        <h1 class="blog-text-center">-- TimeLine --</h1>
         <div class="timeline-year">
             <h1>2015</h1>
             <hr>
