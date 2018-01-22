@@ -29,7 +29,7 @@
           @endif
         </ul>
         <hr>
-        <form class="am-form am-g">
+        {{--  <form class="am-form am-g">
             <h3 class="blog-comment">评论</h3>
           <fieldset>
             <div class="am-form-group am-u-sm-4 blog-clear-left">
@@ -49,7 +49,7 @@
             <p><button type="submit" class="am-btn am-btn-default">发表评论</button></p>
           </fieldset>
         </form>
-        <hr>
+        <hr>  --}}
     </div>
     @include('public.aboutme')
 </div>

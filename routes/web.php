@@ -17,9 +17,7 @@ Route::get('/article/{id}', 'ArticleController@index');
 
 Route::get('/media', 'MediaController@index');
 
-Route::get('/timeline', function () {
-    return view('timeline');
-});
+Route::get('/timeline', 'TimelineController@index');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

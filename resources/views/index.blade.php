@@ -20,42 +20,6 @@
                 </div>
             </div>
       </li>
-      <li>
-            <img src="assets/i/b2.jpg">
-            <div class="am-slider-desc blog-slider-desc">
-                <div class="blog-text-center blog-slider-con">
-                    <span><a href="" class="blog-color">Article &nbsp;</a></span>               
-                    <h1 class="blog-h-margin"><a href="">总在思考一句积极的话</a></h1>
-                    <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
-                    </p>
-                    <span>2015/10/9</span>
-                </div>
-            </div>
-      </li>
-      <li>
-            <img src="assets/i/b3.jpg">
-            <div class="am-slider-desc blog-slider-desc">
-                <div class="blog-text-center blog-slider-con">
-                    <span><a href="" class="blog-color">Article &nbsp;</a></span>               
-                    <h1 class="blog-h-margin"><a href="">总在思考一句积极的话</a></h1>
-                    <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
-                    </p>
-                    <span>2015/10/9</span>
-                </div>
-            </div>
-      </li>
-      <li>
-            <img src="assets/i/b2.jpg">
-            <div class="am-slider-desc blog-slider-desc">
-                <div class="blog-text-center blog-slider-con">
-                    <span><a href="" class="blog-color">Article &nbsp;</a></span>               
-                    <h1 class="blog-h-margin"><a href="">总在思考一句积极的话</a></h1>
-                    <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
-                    </p>
-                    <span>2015/10/9</span>
-                </div>
-            </div>
-      </li>
     </ul>
     </div>
 </div>
