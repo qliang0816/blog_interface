@@ -14,7 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // 强制https
+        \URL::forceScheme('https');
+        // 共享图片分类
         $category = ImageCategories::all();
         view()->share('image_category',$category);
     }
