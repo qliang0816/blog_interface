@@ -4,19 +4,30 @@
 
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li><a href="{{ url('/') }}">ARTICLES</a></li>
+      <li><a href="{{ url('/') }}">Articles</a></li>
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-          GAMMERY <span class="am-icon-caret-down"></span>
+          Category <span class="am-icon-caret-down"></span>
         </a>
         <ul class="am-dropdown-content">
-          <li><a href="{{ url('/media') }}">All</a></li>
+          @foreach($category as $val)
+          <li><a href="{{ url('/?category='.$val->id) }}">{{ $val->name }}</a></li>
+          @endforeach
+          
+        </ul>
+      </li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          Gammery <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="{{ url('/media') }}">All Gammery</a></li>
           @foreach($image_category as $val)
           <li><a href="{{ url('/media?category_id='.$val->id) }}">{{ $val->name }}</a></li>
           @endforeach
         </ul>
       </li>
-      <li><a href="{{ url('/timeline') }}">TIMELINE</a></li>
+      <li><a href="{{ url('/timeline') }}">Timeline</a></li>
     </ul>
     <form action="{{ url('/') }}" class="am-topbar-form am-topbar-right am-form-inline" role="search" method="get">
       <div class="am-form-group">
