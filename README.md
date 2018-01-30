@@ -66,7 +66,7 @@ $ sudo groupadd docker
 ```
 将当前用户加入 docker 组：
 ```
-$ sudo usermod -aG docker $USER”
+$ sudo usermod -aG docker $USER
 ```
 
 ## 安装docker-compose
@@ -77,7 +77,7 @@ $ sudo usermod -aG docker $USER”
 
 在 Linux 上的也安装十分简单，从 官方 GitHub Release 处直接下载编译好的二进制文件即可。
 ```
-$ sudo curl -L https://github.com/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
@@ -85,3 +85,27 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 $ sudo curl -L https://raw.githubusercontent.com/docker/compose/1.8.0/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
 ```
+
+## 镜像加速器
+
+在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件)
+```
+{
+  "registry-mirrors": [
+    "https://registry.docker-cn.com"
+  ]
+}
+```
+
+重启服务
+```
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+```
+
+执行`docker info`,看到以下结果，说明配置成功
+```
+“Registry Mirrors:
+ https://registry.docker-cn.com/
+```
+
