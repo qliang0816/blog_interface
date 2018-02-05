@@ -34,7 +34,7 @@
         <div class="am-list-news" >
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-4 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <img src="{{ asset('storage/'.$text->image) }}" alt="" class="am-u-sm-12">
+                    <img src="{{ asset('storage/'.$text->image) }}" alt="" class="am-u-sm-8" style="margin-left:30px">
                 </div>
                 <div class="am-u-lg-8 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span><a href="{{ url('/') }}" class="blog-color">article &nbsp;&nbsp;</a></span>
