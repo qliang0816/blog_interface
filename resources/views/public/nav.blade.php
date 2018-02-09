@@ -18,10 +18,10 @@
       </li>
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-          Gammery <span class="am-icon-caret-down"></span>
+          Album <span class="am-icon-caret-down"></span>
         </a>
         <ul class="am-dropdown-content">
-          <li><a href="{{ url('/media') }}">All Gammery</a></li>
+          <li><a href="{{ url('/media') }}">All Album</a></li>
           @foreach($image_category as $val)
           <li><a href="{{ url('/media?category_id='.$val->id) }}">{{ $val->name }}</a></li>
           @endforeach
