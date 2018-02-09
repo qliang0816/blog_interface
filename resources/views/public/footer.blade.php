@@ -30,5 +30,5 @@
             </p>
         </div>
     </div>      --}}
-    <div class="blog-text-center">© 2017 AllMobilize, Inc. Licensed under MIT license. Made By Leo</div>    
+    <div class="blog-text-center">© 2017 AllMobilize, Inc. Licensed under MIT license. Design By Leo</div>    
 </footer>
