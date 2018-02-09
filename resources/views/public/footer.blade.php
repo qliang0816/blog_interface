@@ -30,5 +30,5 @@
             </p>
         </div>
     </div>      --}}
-    <div class="blog-text-center">© 2017 AllMobilize, Inc. Licensed under MIT license. Design By Leo</div>    
+    <div class="blog-text-center"><a href="http://www.miitbeian.gov.cn/">苏ICP备18007674号-1</a><br> Designed and developed by Leo. <br>Copyright © 2017-2018 bestqliang.com. All Rights Reserved. <br></div>
 </footer>
