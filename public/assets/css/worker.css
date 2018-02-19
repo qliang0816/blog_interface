@@ -23,7 +23,7 @@
 }
 
 .qq-logo {
-    background: url('../mine/my_qq.png') no-repeat;
+    background: url('../i/my_qq.png') no-repeat;
     background-size: 100px 100px;
     overflow: hidden;
     position: absolute;
@@ -42,7 +42,7 @@
 }
 
 .wechat-logo {
-    background: url('../mine/my_wechat.png') no-repeat;
+    background: url('../i/my_wechat.png') no-repeat;
     background-size: 100px 100px;
     overflow: hidden;
     position: absolute;
@@ -60,7 +60,7 @@
 }
 
 .weibo-logo {
-    background: url('../mine/my_weibo.png') no-repeat;
+    background: url('../i/my_weibo.png') no-repeat;
     background-size: 100px 100px;
     overflow: hidden;
     position: absolute;
