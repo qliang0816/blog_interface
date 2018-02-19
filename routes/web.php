@@ -19,6 +19,6 @@ Route::get('/media', 'MediaController@index');
 
 Route::get('/timeline', 'TimelineController@index');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'bk'], function () {
     Voyager::routes();
 });
