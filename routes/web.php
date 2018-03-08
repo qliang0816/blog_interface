@@ -19,6 +19,15 @@ Route::get('/media', 'MediaController@index');
 
 Route::get('/timeline', 'TimelineController@index');
 
+// 首页文章分页
+Route::get('/home/paginate/{paginate}', "HomeController@home");
+// 文章标题分类
+Route::get('/category', "CategoryController@category");
+// 标签分类
+Route::get('/tagcate', "CategoryController@tagCate");
+// 图片分类
+Route::get('/imagecate', "CategoryController@imageCate");
+
 Route::group(['prefix' => 'bk'], function () {
     Voyager::routes();
 });
