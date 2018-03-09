@@ -13,7 +13,7 @@ class HomeController extends BaseController
      */
     public function home($paginate)
     {
-        $texts = Texts::where('is_show','1')->orderBy('updated_at','desc')->paginate($paginate);
+        $texts = Texts::select('id','title','summary','category_id','image','updated_at')->where('is_show','1')->orderBy('updated_at','desc')->paginate($paginate);
         return response()->json($texts);
     }
 
