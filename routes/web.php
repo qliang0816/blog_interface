@@ -25,6 +25,8 @@ Route::get('/home/paginate/{paginate}', "HomeController@home");
 Route::get('/category', "CategoryController@category");
 // 标签分类
 Route::get('/tagcate', "CategoryController@tagCate");
+// 文章标题分类
+Route::get('/titlecate', "CategoryController@titleCate");
 // 图片分类
 Route::get('/imagecate', "CategoryController@imageCate");
 

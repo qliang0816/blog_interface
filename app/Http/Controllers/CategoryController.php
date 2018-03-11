@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Texts;
 use TCG\Voyager\Models\Category;
+use App\ImageCategories;
 
 class CategoryController extends BaseController
 {
@@ -27,6 +28,15 @@ class CategoryController extends BaseController
             }
         }
         return response()->json($text_category);
+    }
+
+    /**
+     * @api 文章标题分类
+     */
+    public function TitleCate()
+    {
+        $categories = Category::select('id','name')->orderBy('order','asc')->get();
+        return response()->json($categories);
     }
 
     /**
