@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Texts;
 use TCG\Voyager\Models\Category;
 use App\ImageCategories;
+use App\Tags;
 
 class CategoryController extends BaseController
 {
