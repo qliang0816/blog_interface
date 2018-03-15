@@ -11,16 +11,14 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
 
-Route::get('/article/{id}', 'ArticleController@index');
 
 Route::get('/media', 'MediaController@index');
 
 Route::get('/timeline', 'TimelineController@index');
 
 // 首页文章分页
-Route::get('/home/paginate/{paginate}', "HomeController@home");
+Route::get('/home', "HomeController@home");
 // 文章标题分类
 Route::get('/category', "CategoryController@category");
 // 标签分类
@@ -29,6 +27,11 @@ Route::get('/tagcate', "CategoryController@tagCate");
 Route::get('/titlecate', "CategoryController@titleCate");
 // 图片分类
 Route::get('/imagecate', "CategoryController@imageCate");
+// 文章内容和前后两篇文章
+Route::get('/article', 'ArticleController@index');
+
+
+
 
 Route::group(['prefix' => 'bk'], function () {
     Voyager::routes();
