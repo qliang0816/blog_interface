@@ -15,7 +15,6 @@
 
 Route::get('/media', 'MediaController@index');
 
-Route::get('/timeline', 'TimelineController@index');
 
 // 首页文章分页
 Route::get('/home', "HomeController@home");
@@ -29,7 +28,8 @@ Route::get('/titlecate', "CategoryController@titleCate");
 Route::get('/imagecate', "CategoryController@imageCate");
 // 文章内容和前后两篇文章
 Route::get('/article', 'ArticleController@index');
-
+// 时间线
+Route::get('/timeline', 'TimelineController@index');
 
 
 
