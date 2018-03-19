@@ -13,7 +13,6 @@
 
 
 
-Route::get('/media', 'MediaController@index');
 
 
 // 首页文章分页
@@ -30,6 +29,8 @@ Route::get('/imagecate', "CategoryController@imageCate");
 Route::get('/article', 'ArticleController@index');
 // 时间线
 Route::get('/timeline', 'TimelineController@index');
+// 图片
+Route::get('/media', 'MediaController@index');
 
 
 
