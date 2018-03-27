@@ -17,10 +17,14 @@ class HomeController extends BaseController
         $paginate = $request->input('paginate');
         // 分类
         $category_id = $request->input('category_id');
-        // dd($category_id);
+        // 搜索
+        $searchData = $request->input('searchData');
         $texts = Texts::select('id','title','summary','category_id','image','updated_at')->where('is_show','1')
         ->when(!empty($category_id),function($query) use ($category_id){
                 return $query->where('category_id',$category_id);
+            })
+        ->when(!empty($searchData),function($query) use ($searchData){
+                return $query->where('title','like','%'.$searchData.'%');
             })->orderBy('updated_at','desc')->paginate($paginate);
         return response()->json($texts);
     }
