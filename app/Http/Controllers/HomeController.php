@@ -34,15 +34,17 @@ class HomeController extends BaseController
         } else {
             $in_query = [];
         }
-        
+
         $texts = Texts::select('id', 'title', 'summary', 'category_id', 'image', 'updated_at')
             ->where('is_show', '1')
-            ->whereIn('id', $in_query)
             ->when(!empty($category_id), function ($query) use ($category_id) {
                 return $query->where('category_id', $category_id);
             })
             ->when(!empty($searchData), function ($query) use ($searchData) {
                 return $query->where('title', 'like', '%' . $searchData . '%');
+            })
+            ->when(!empty($tag_id), function ($query) use ($in_query) {
+                return $query->whereIn('id', $in_query);
             })
             ->orderBy('updated_at', 'desc')
             ->paginate($paginate);
