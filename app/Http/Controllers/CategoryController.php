@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Texts;
 use TCG\Voyager\Models\Category;
 use App\ImageCategories;
@@ -17,9 +18,9 @@ class CategoryController extends BaseController
     public function category()
     {
         // 文章
-        $texts = Texts::select('id','title','category_id')->get();
+        $texts = Texts::select('id', 'title', 'category_id')->get();
         // 文章分类
-        $categories = Category::select('id','name')->orderBy('order','asc')->get();
+        $categories = Category::select('id', 'name')->orderBy('order', 'asc')->get();
         foreach ($texts as $key => $val) {
             foreach ($categories as $value) {
                 if ($value->id == $val->category_id) {
@@ -36,19 +37,34 @@ class CategoryController extends BaseController
      */
     public function TitleCate()
     {
-        $categories = Category::select('id','name')->orderBy('order','asc')->get();
+        $categories = Category::select('id', 'name')->orderBy('order', 'asc')->get();
         return response()->json($categories);
     }
 
     /**
      * @api 标签分类
      */
-    public function TagCate()
+    public function TagCate(Request $request)
     {
-        $tags = Tags::all();
+        $article_id = $request->input('article_id');
+        if (!empty($article_id)) {
+            $tag_id = DB::table('text_tags')->select('tag_id')->where('text_id', $article_id)->get();
+            if (!$tag_id->isEmpty()) {
+                for ($i = 0; $i < count($tag_id); $i++) {
+                    $in_query[] = $tag_id[$i]->tag_id;
+                }
+            } else {
+                $in_query = [];
+            }
+        } else {
+            $in_query = [];
+        }
+        $tags = Tags::when(!empty($article_id), function ($query) use ($in_query) {
+            return $query->whereIn('id', $in_query);
+        })->get();
         return response()->json($tags);
     }
-    
+
     /**
      * @api 图片分类
      */
