@@ -35,7 +35,7 @@ class HomeController extends BaseController
             $in_query = [];
         }
 
-        $texts = Texts::select('id', 'title', 'summary', 'category_id', 'image', 'updated_at')
+        $texts = Texts::select('id', 'title', 'summary', 'category_id', 'image', 'updated_at','is_read')
             ->where('is_show', '1')
             ->when(!empty($category_id), function ($query) use ($category_id) {
                 return $query->where('category_id', $category_id);
