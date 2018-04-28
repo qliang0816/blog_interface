@@ -18,13 +18,18 @@ class CategoryController extends BaseController
     public function category()
     {
         // 文章
-        $texts = Texts::select('id', 'title', 'category_id')->get();
+        $texts = Texts::select('id', 'title', 'category_id')->where('is_show',1)->orderBy('updated_at', 'desc')->get();
         // 文章分类
         $categories = Category::select('id', 'name')->orderBy('order', 'asc')->get();
-        foreach ($texts as $key => $val) {
+        $text_category=[];
+        foreach ($texts as $val) {
             foreach ($categories as $value) {
                 if ($value->id == $val->category_id) {
-                    $text_category[$value->name][] = $val;
+                        $text_category[$value->name][] = $val;
+                        // 默认只显示6条数据
+                        if (count($text_category[$value->name])>6) {
+                            array_pop($text_category[$value->name]);
+                        }
                     break 1;
                 }
             }
